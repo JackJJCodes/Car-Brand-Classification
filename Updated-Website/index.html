@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS Files Link -->
+    <link rel="stylesheet" href="/static/css/styles1.css">
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- JS Files link -->
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="../static/js/index1.js"></script>
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+
+    <title>Car-Brand Classifier</title>
+</head>
+
+<body align="center">
+
+    <!-- Heading -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" style="font-size: 4rem;" href="#">Car-brand Predictor</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="text">Is it a Mercedes? an Audi? or a Lamborghini?</div>
+    <div class="spanText">
+        <svg width="100vw" height="100vh"><text x="45%" y="55%">Find out here!</text></svg>
+    </div>
+
+    <!-- Card section begins -->
+    <section class="logo-section" id="logo-section">
+
+        <div class="row">
+
+            <div class="brand-details col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Mercedes Benz</h3>
+                    </div>
+                    <div class="card-body box-item-Merc"
+                        data-hover="Mercedes-Benz, [6][7] commonly referred to as Mercedes, is both a German automotive brand and, from late 2019 onwards, a subsidiary – as Mercedes-Benz AG – of Daimler AG.[1] Mercedes-Benz is known for producing luxury vehicles and commercial vehicles.[note 2] The headquarters is in Stuttgart, Baden-Württemberg. The first Mercedes-Benz brand name vehicles were produced in 1926. In 2018, Mercedes-Benz was the largest seller of premium vehicles in the world, having sold 2.31 million passenger cars.">
+                        <img src="/static/images/merc.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="brand-details col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Audi</h3>
+                    </div>
+                    <div class="card-body card-audi box-item-Audi"
+                        data-hover="Audi AG is a German automobile manufacturer that designs, engineers, produces, markets and distributes luxury vehicles. Audi is a subsidiary of Volkswagen Group and has its roots at Ingolstadt, Bavaria, Germany. Audi vehicles are produced in nine production facilities worldwide.">
+                        <img src="/static/images/audi.jpg">
+                    </div>
+                </div>
+            </div>
+
+            <div class="brand-details col-lg-4 col-md-12">
+                <div class="card">
+                    <div class="card-header box-item-Lambo"
+                        data-hover="Automobili Lamborghini S.p.A. is an Italian brand and manufacturer of luxury sports cars and SUVs based in Sant'Agata Bolognese. The company is owned by the Volkswagen Group through its subsidiary Audi.">
+                        <h3>Lamborghini</h3>
+                    </div>
+                    <div class="card-body">
+                        <img src="/static/images/BWLambo.jpg">
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </section>
+
+    <!-- Card section ends -->
+
+    <!-- Submit button section starts -->
+
+
+    <section id="submit-button" class="submit-button">
+        <form method="post" enctype="multipart/form-data" id="upload-file">
+            <label for="imageUpload" class="upload-label">
+                Choose
+            </label>
+            <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+        </form>
+
+        <div class="image-section">
+            <div class="img-preview">
+                <div id="imagePreview">
+
+                </div>
+            </div>
+            <div class="predict-button">
+                <button class="btn btn-primary btn-lg" id="btn-predict">Predict!</button>
+            </div>
+        </div>
+
+        <div class="loader">
+            <h3 id="result"></h3>
+        </div>
+    </section>
+
+
+    <!-- Submit button section ends -->
+
+
+
+</body>
+
+</html>
